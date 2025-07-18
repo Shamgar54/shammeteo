@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShamMeteo | Météo en temps réel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+<div class="preloader">
+  <div class="preloader-content">
+    <img src="asset/logo.png" alt="ShamMeteo Logo" class="preloader-logo">
+    <p class="preloader-slogan">Shamgar Météo: Météo précise, soleil ou pluie!</p>
+    
+    <!-- Barre de chargement "pluie" -->
+    <div class="rain-loader">
+      <div class="raindrop"></div>
+      <div class="raindrop"></div>
+      <div class="raindrop"></div>
+      <div class="raindrop"></div>
+      <div class="raindrop"></div>
+    </div>
+  </div>
+</div>
+    <!-- Header avec recherche et boutons -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+    <a href="index.html">
+        <img src="asset/logo.png" alt="ShamMeteo" class="logo-img">
+    </a>
+</div>
+            <div class="search-bar">
+                <input type="text" id="city-input" placeholder="Rechercher une ville...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <button id="location-btn"><i class="fas fa-location-arrow"></i></button>
+            </div>
+            <div class="unit-toggle">
+                <button id="celsius-btn" class="active">°C</button>
+                <button id="fahrenheit-btn">°F</button>
+            </div>
+            <button id="dark-mode-btn"><i class="fas fa-moon"></i></button>
+        </div>
+    </header>
+
+    <!-- Section Météo Actuelle -->
+    <section class="current-weather">
+        <div class="container">
+            <div class="weather-card">
+                <h2 id="city-name">Chargement...</h2>
+                <p id="current-date">--/--/----</p>
+                <div class="weather-main">
+                    <img id="weather-icon" src="https://img.icons8.com/color/96/000000/sun--v1.png" alt="Weather Icon">
+                    <div class="temp">
+                        <span id="current-temp">--</span>
+                        <span class="unit">°C</span>
+                    </div>
+                    <p id="weather-description">--</p>
+                </div>
+                <div class="weather-details">
+                    <p><i class="fas fa-tint"></i> Humidité: <span id="humidity">--%</span></p>
+                    <p><i class="fas fa-tachometer-alt"></i> Pression: <span id="pressure">-- hPa</span></p>
+                    <p><i class="fas fa-wind"></i> Vent: <span id="wind">-- km/h</span></p>
+                    <p><i class="fas fa-temperature-low"></i> Ressenti: <span id="feels-like">--°C</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prévisions sur 5 jours -->
+    <section class="forecast">
+        <div class="container">
+            <h2>Prévisions sur 5 jours</h2>
+            <div class="forecast-cards" id="forecast-container">
+                <!-- Généré dynamiquement en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Créé par <strong>Maré Kiswendsida Shamgar</strong></p>
+            <p>Données fournies par <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+            <p><a href="#" id="about-link">À propos</a> | <a href="#" id="legal-link">Mentions légales</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
